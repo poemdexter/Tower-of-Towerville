@@ -11,7 +11,7 @@ namespace Tower_of_Towerville.screenStuff.screens
         public MainMenuScreen()
             : base("Main Menu")
         {
-            MenuEntry playGameMenuEntry = new MenuEntry("Test");
+            MenuEntry playGameMenuEntry = new MenuEntry("Play Game");
             MenuEntry exitMenuEntry = new MenuEntry("Exit");
 
             playGameMenuEntry.Selected += PlayGameMenuEntrySelected;

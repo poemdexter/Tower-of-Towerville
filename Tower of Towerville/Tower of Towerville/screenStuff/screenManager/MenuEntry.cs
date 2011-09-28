@@ -69,7 +69,7 @@ namespace Tower_of_Towerville.screenStuff.screenManager
         /// </summary>
         public virtual int GetHeight(MenuScreen screen)
         {
-            return screen.ScreenMngr.Font.LineSpacing;
+            return screen.ScreenMngr.Font.LineSpacing * 4;
         }
 
 
