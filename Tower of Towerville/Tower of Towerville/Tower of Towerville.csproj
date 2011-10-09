@@ -115,12 +115,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Game1.cs" />
-    <Compile Include="screenStuff\screenManager\GameScreen.cs" />
-    <Compile Include="screenStuff\screenManager\InputState.cs" />
-    <Compile Include="screenStuff\screenManager\MenuEntry.cs" />
-    <Compile Include="screenStuff\screenManager\MenuScreen.cs" />
-    <Compile Include="screenStuff\screenManager\ScreenManager.cs" />
-    <Compile Include="screenStuff\screens\MainMenuScreen.cs" />
+    <Compile Include="screens\framework\GameScreen.cs" />
+    <Compile Include="screens\framework\InputState.cs" />
+    <Compile Include="managers\ScreenManager.cs" />
+    <Compile Include="screens\screens\MainMenuScreen.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Game.ico" />

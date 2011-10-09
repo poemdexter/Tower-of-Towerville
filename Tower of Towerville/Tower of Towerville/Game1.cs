@@ -8,8 +8,8 @@ using Microsoft.Xna.Framework.GamerServices;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
-using Tower_of_Towerville.screenStuff.screenManager;
-using Tower_of_Towerville.screenStuff.screens;
+using Tower_of_Towerville.managers;
+using Tower_of_Towerville.screens.screens;
 
 namespace Tower_of_Towerville
 {
