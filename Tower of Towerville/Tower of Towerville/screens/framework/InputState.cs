@@ -8,31 +8,33 @@ namespace Tower_of_Towerville.screens.framework
     {
         public KeyboardState CurrentKeyboardState;
         public KeyboardState LastKeyboardState;
+        private int keyboardElapsedTime;
 
         public InputState()
         {
             CurrentKeyboardState = new KeyboardState();
             LastKeyboardState = new KeyboardState();
+            keyboardElapsedTime = 0;
         }
 
-        /// <summary>
-        /// Reads the latest state of the keyboard and gamepad.
-        /// </summary>
-        public void Update()
+        public void Update(GameTime gameTime)
         {
-                LastKeyboardState = CurrentKeyboardState;
-                CurrentKeyboardState = Keyboard.GetState();
+            LastKeyboardState = CurrentKeyboardState;
+            CurrentKeyboardState = Keyboard.GetState();
+            keyboardElapsedTime -= gameTime.ElapsedGameTime.Milliseconds;
         }
 
-        /// <summary>
-        /// Helper for checking if a key was newly pressed during this update. The
-        /// controllingPlayer parameter specifies which player to read input for.
-        /// If this is null, it will accept input from any player. When a keypress
-        /// is detected, the output playerIndex reports which player pressed it.
-        /// </summary>
         public bool IsNewKeyPress(Keys key)
         {
-                return (CurrentKeyboardState.IsKeyDown(key) && LastKeyboardState.IsKeyUp(key));
+            if (keyboardElapsedTime <= 0)
+            {
+                if (CurrentKeyboardState.IsKeyDown(key))
+                {
+                    keyboardElapsedTime = 200;
+                    return true;
+                }
+            }
+            return false;
         }
     }
 }
