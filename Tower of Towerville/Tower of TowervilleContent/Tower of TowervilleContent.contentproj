@@ -55,7 +55,6 @@
       <Processor>FontTextureProcessor</Processor>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <Compile Include="environment\floor.png">
       <Name>floor</Name>
