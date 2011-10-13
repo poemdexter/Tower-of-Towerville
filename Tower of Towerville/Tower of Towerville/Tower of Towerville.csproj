@@ -111,10 +111,19 @@
   <ItemGroup>
     <Compile Include="dungeon\AIPoint.cs" />
     <Compile Include="dungeon\Tower.cs" />
+    <Compile Include="entities\action args\ChangeDirectionOfAnimationArgs.cs" />
+    <Compile Include="entities\action args\ChangePositionArgs.cs" />
+    <Compile Include="entities\actions\ChangeAbsPosition.cs" />
+    <Compile Include="entities\actions\ChangeDeltaPosition.cs" />
+    <Compile Include="entities\actions\ChangeDirectionOfAnimation.cs" />
+    <Compile Include="entities\actions\NextFrameOfAnimation.cs" />
+    <Compile Include="entities\components\Animation.cs" />
+    <Compile Include="entities\components\Position.cs" />
     <Compile Include="framework\Action.cs" />
     <Compile Include="framework\ActionArgs.cs" />
     <Compile Include="framework\Component.cs" />
     <Compile Include="framework\Entity.cs" />
+    <Compile Include="managers\PlayerManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Game1.cs" />
@@ -164,11 +173,7 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="entities\action args\" />
-    <Folder Include="entities\actions\" />
-    <Folder Include="entities\components\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="dungeon\floor.dat">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
