@@ -12,16 +12,22 @@ namespace Tower_of_Towerville.screens.screens
 {
     class NameInputScreen : GameScreen
     {
-        private const string titleText = "Enter Name";
+        private const string titleText = "Enter Name:";
         private StringBuilder keyboardInput;
         private KeyboardStringBuilder keyboardStringBuilder;
         private GameScreen ParentScreen;
+        Texture2D backgroundTexture;
 
         public NameInputScreen(GameScreen parentScreen)
         {
             keyboardInput = new StringBuilder();
             keyboardStringBuilder = new KeyboardStringBuilder();
             ParentScreen = parentScreen;
+        }
+
+        public override void LoadContent()
+        {
+            backgroundTexture = screenManager.Game.Content.Load<Texture2D>("screen/nameinput_bg");
         }
 
         public override void HandleInput(InputState input)
@@ -55,6 +61,9 @@ namespace Tower_of_Towerville.screens.screens
 
             spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend, SamplerState.PointClamp, DepthStencilState.None, RasterizerState.CullCounterClockwise, null);
 
+            // draw background
+            float scale = 4f;
+            spriteBatch.Draw(backgroundTexture, new Vector2(graphics.Viewport.Width / 2, 310), backgroundTexture.Bounds, Color.White, 0f, new Vector2(backgroundTexture.Width / 2, backgroundTexture.Height / 2), scale, SpriteEffects.None, 0f);
             // draw title
             spriteBatch.DrawString(font, titleText, new Vector2(graphics.Viewport.Width / 2, 300), Color.White, 0, font.MeasureString(titleText) / 2, 4f, SpriteEffects.None, 0);
             // draw current name
