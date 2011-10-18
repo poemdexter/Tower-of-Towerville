@@ -130,9 +130,11 @@
     <Compile Include="screens\framework\GameScreen.cs" />
     <Compile Include="screens\framework\InputState.cs" />
     <Compile Include="managers\ScreenManager.cs" />
+    <Compile Include="screens\screens\EndGameScreen.cs" />
     <Compile Include="screens\screens\IntroductionScreen.cs" />
     <Compile Include="screens\screens\MainGameScreen.cs" />
     <Compile Include="screens\screens\MainMenuScreen.cs" />
+    <Compile Include="screens\framework\MenuEntry.cs" />
     <Compile Include="screens\screens\NameInputScreen.cs" />
     <Compile Include="util\KeyboardStringBuilder.cs" />
   </ItemGroup>

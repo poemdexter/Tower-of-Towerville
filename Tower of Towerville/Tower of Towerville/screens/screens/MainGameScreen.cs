@@ -86,6 +86,9 @@ namespace Tower_of_Towerville.screens.screens
             {
                 PlayerManager.Player.DoAction("ChangeDeltaPosition", new ChangePositionArgs(new Vector2(0, 1)));
             }
+
+            if (input.IsNewKeyPress(Keys.Escape))
+                screenManager.AddScreen(new EndGameScreen());
         }
 
         public override void Update(GameTime gameTime)
