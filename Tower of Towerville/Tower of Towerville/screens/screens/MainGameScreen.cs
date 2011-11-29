@@ -146,6 +146,10 @@ namespace Tower_of_Towerville.screens.screens
                 spriteBatch.Draw(animation.SourceTexture, new Vector2(x * (scale * animation.SourceRect.Width) + XtoCenter, y * (scale * animation.SourceRect.Height)), animation.SourceRect, Color.White, 0f, Vector2.Zero, scale, animation.Effects, 0f);
             }
 
+            // draw main UI
+            texture = spriteDict["mainUI_bg"];
+            spriteBatch.Draw(texture, new Vector2(0, graphics.Viewport.Height), texture.Bounds, Color.White, 0f, new Vector2(0, texture.Height), scale, SpriteEffects.None, 0f);
+
             // draw player
             int px = (int)((Position)PlayerManager.Player.GetComponent("Position")).X;
             int py = (int)((Position)PlayerManager.Player.GetComponent("Position")).Y;
@@ -164,6 +168,7 @@ namespace Tower_of_Towerville.screens.screens
             spriteDict.Add("wall_reg", screenManager.Game.Content.Load<Texture2D>("environment/wall_reg"));
             spriteDict.Add("wall_torch", screenManager.Game.Content.Load<Texture2D>("environment/wall_torch"));
             spriteDict.Add("stairs_up", screenManager.Game.Content.Load<Texture2D>("environment/stairs_up"));
+            spriteDict.Add("mainUI_bg", screenManager.Game.Content.Load<Texture2D>("screen/mainUI_bg"));
         }
     }
 }
